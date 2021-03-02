@@ -20,3 +20,5 @@
 
 #### Change row 3 in app.js port to match your port
 #### Change row 13 in app.js to match your wiring
+
+#### If you find any errors in the code or comments please write to me and I'll update it. 
