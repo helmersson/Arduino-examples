@@ -1,6 +1,6 @@
 // Initiates Johnny-five
 const { Board, Led } = require("johnny-five");
-const board = new Board({ port: "/dev/cu.usbmodem141101"});
+const board = new Board({ port: "/dev/cu.usbmodem141101"}); //CHANGE THIS
 
 //Initiates Express
 const express = require("express");
@@ -11,7 +11,7 @@ let isLightOn = false;
 
 board.on("ready", () => {
 //creates a variable for the led connected to the port - in this case port 9
-    const led = new Led(9);
+    const led = new Led(9); // CHANGE THIS
 
     //initiates server on port 3001
     app.listen(3001, () => { console.log("listening at 3001") });
