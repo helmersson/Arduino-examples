@@ -2,7 +2,7 @@
  A simple experiment that lights up a led on with the help of Johnny-five and an Arduino using Javascript. The light is controlled by a gui on LOCALHOST:3001 with a simple GUI hosted with Express.
 
 ##      PREREQUISITE
- 1. Download Visual stuido code
+ 1. Download Visual studio code
  2. Download node.js
  3. Download latest version of Python
  4. If on mac download Xcode
