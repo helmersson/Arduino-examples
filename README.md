@@ -11,7 +11,7 @@
 #### 4. If on mac download Xcode
 
 
-##      INSTALATION
+##      INSTALLATION
 #### 1. Open terminal
 #### 2. Open the current enviroment in the terminal
 #### 3. Type npm init in the terminal
@@ -20,5 +20,11 @@
 
 #### Change row 3 in app.js port to match your port
 #### Change row 13 in app.js to match your wiring
+
+## How to use
+
+#### 1. start the server by typing "node app.js" in the terminal
+#### 2. Open up your your browser and type "http://localhost:3001/"
+#### 3. Play around with the button and your Arduino
 
 #### If you find any errors in the code or comments please write to me and I'll update it. 
