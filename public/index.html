@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        
+        #button {
+            color: white;
+            background-color: lightslategray;
+            display: inline-block;
+            margin: 12px;
+            padding: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>johnny-five goodness</h1>
+
+    <div id="button">Click me</div>
+
+    <p>Debug text: <span id="debug"></span></p>
+
+    <script>
+        const button = document.getElementById("button");
+        let isButtonActive;
+
+        //for debugging
+        const debug = document.getElementById("debug");
+        debug.textContent = "Starting ...";
+
+        //event listener enabling mousedown
+        button.addEventListener("mousedown", onMouseDown);
+
+            //start the initial startup
+        onStart();
+        //What happens when you press the mouse down
+        async function onMouseDown(event) {
+            const message = "Change light state";
+            const someBoolean = true;
+            const data = { message, someBoolean };
+            const options = {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            }
+
+            const response = await fetch("/set-arduino-light", options);
+            const responseJSON = await response.json();
+
+            constResponseJSONdata = JSON.parse(responseJSON.data);
+
+            console.log("someString: " + constResponseJSONdata.someString);
+
+            isButtonActive = constResponseJSONdata.isLightOn;
+
+            setButtonState();
+        }
+
+        // setup function
+        async function onStart() {
+            const response = await fetch("/light-state");
+            const data = await response.json();
+
+            isButtonActive = data.isLightOn;
+            
+            setButtonState();
+
+            debug.textContent = "state recieved, button ready!";
+        }
+        // function for changing the button for ON/OFF
+        function setButtonState() {
+            if (isButtonActive) {
+                button.textContent = "TURN OFF";
+                button.style.color = "black";
+                button.style.backgroundColor = "yellow";
+            } else {
+                button.textContent = "TURN ON";
+                button.style.color = "white";
+                button.style.backgroundColor = "lightslategray";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
