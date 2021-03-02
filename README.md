@@ -12,6 +12,13 @@
 
 
 ##      INSTALLATION
+### In ARDUINO IDE
+#### 1. Plug in your arduino and set it up
+#### 2. Check so that you are connected to the right port
+#### 3. Go to File>Examples>Firmata>StandardFirmataPlus
+#### 4. Upload the example to your Arduino
+
+### In VS CODE
 #### 1. Open terminal
 #### 2. Open the current enviroment in the terminal
 #### 3. Type npm init in the terminal
