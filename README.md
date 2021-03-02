@@ -22,8 +22,7 @@
 #### 1. Open terminal
 #### 2. Open the current enviroment in the terminal
 #### 3. Type npm init in the terminal
-#### 4. Type npm install johhny-five
-#### 5. You might have to do npm install serialport
+#### 4. Type npm install
 
 #### Change row 3 in app.js port to match your port
 #### Change row 13 in app.js to match your wiring
